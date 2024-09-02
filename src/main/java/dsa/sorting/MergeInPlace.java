@@ -5,7 +5,6 @@ public class MergeInPlace {
     static void mergeSortInPlace(int[] arr, int start, int end) {
         if (start < end) {
             int mid = (start + end) / 2;
-
             mergeSortInPlace(arr, start, mid);
             mergeSortInPlace(arr, mid + 1, end);
             mergeInPlace(arr, start, mid, end);
@@ -15,9 +14,8 @@ public class MergeInPlace {
     private static void mergeInPlace(int[] arr, int start, int mid, int end) {
         int i = start;
         int j = mid + 1;
-        int k = start; // Initial index for the temporary array
-
-        int[] tempArr = new int[arr.length]; // Temporary array to store merged subarray
+        int k = start;
+        int[] tempArr = new int[arr.length];
 
         // Merge the two halves into the temporary array
         while (i <= mid && j <= end) {

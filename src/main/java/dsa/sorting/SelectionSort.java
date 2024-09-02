@@ -25,8 +25,8 @@ public class SelectionSort {
     private static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int last = arr.length - i - 1;
-            int getMax = getMaxIndex(arr, 0, last);
-            swap(arr, getMax, last);
+            int maxIndex = getMaxIndex(arr, i, last);
+            swap(arr, maxIndex, last);
         }
     }
 
@@ -38,13 +38,11 @@ public class SelectionSort {
 
     private static int getMaxIndex(int[] arr, int i, int last) {
         int max = 0;
-
-        for (int j = 0; j <= i; j++) {
+        for (int j = 0; j <= last; j++) {
             if (arr[max] < arr[j]) {
                 max = j;
             }
         }
-        System.out.println(max);
         return max;
     }
 }

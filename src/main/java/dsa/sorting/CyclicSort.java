@@ -6,15 +6,15 @@ public class CyclicSort {
 
 
     public static void cyclicSort(int[] arr) {
-        int i =0 ;
-        while (i < arr.length) {
-            int currentIndex = arr[i] - 1;
-            if (arr[i] != arr[currentIndex]) {
-                swap(arr,i,currentIndex);
-            }else{
-                i++;
-            }
-        }
+       int i = 0;
+       while(i<arr.length){
+           int currectIndex = arr[i] -1;
+           if(arr[i] != arr[currectIndex]){
+               swap(arr,i,currectIndex);
+           }else{
+               i++;
+           }
+       }
     }
 
     public static void swap(int[] arr, int first, int second) {

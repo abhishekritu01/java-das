@@ -4,8 +4,15 @@ import java.util.Arrays;
 
 public class Insertionsort {
 
-    public static void insertion(int[] arr) {
+    public static void main(String[] args) {
 
+        int[] arr = {4, 2, 1, 6, 9, 3};
+        insertion(arr);
+        System.out.println("Sorted array is: " + Arrays.toString(arr));
+
+    }
+
+    private static void insertion(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (arr[j] < arr[j - 1]) {
@@ -17,18 +24,9 @@ public class Insertionsort {
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    public static void main(String[] args) {
-
-        int[] arr = {4, 2, 1, 6, 9, 3};
-
-        insertion(arr);
-        System.out.println("Sorted array is: " + Arrays.toString(arr));
-
+    public static void swap(int[] arr, int first, int second) {
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
