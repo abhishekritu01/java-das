@@ -8,7 +8,8 @@ public class Demo {
         MONDAY,
         TUESDAY,
         WEDNESDAY,
-        THRUSDAY
+        THRUSDAY,
+        FRIDAY,
 
     }
 
